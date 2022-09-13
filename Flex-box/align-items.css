@@ -1,0 +1,25 @@
+body {
+  background: white;
+}
+
+.container {
+  background: blueviolet;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+
+  align-content: center;
+
+  
+}
+
+
+.items {
+  background: #ccc;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 5px;
+}
+
