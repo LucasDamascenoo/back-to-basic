@@ -2,6 +2,9 @@ body {
   background: white;
 }
 
+p {
+  color: red;
+}
 .container {
   background: blueviolet;
   width: 700px;
@@ -10,10 +13,7 @@ body {
   flex-direction: column;
 
   align-content: center;
-
-  
 }
-
 
 .items {
   background: #ccc;
@@ -22,4 +22,3 @@ body {
   padding: 20px;
   margin: 5px;
 }
-
