@@ -139,7 +139,11 @@ Float é uma maneira de manipular elementos (caindo em desuso) atraves de suas p
 
 ## Flex-box
 
-Flex-box é usado para manipular os elementos de forma mais facil para criação de Layouts.
+Flex-box é usado para manipular os elementos de forma mais facil para criação de Layouts (de uma dimensão).
+
+## Cheatsheet
+
+![flex-box-cheatseat](./src/img/css%20tricks.jpg)
 
 ## o que acontece quando utilizamos a propriedades display-flex?
 
