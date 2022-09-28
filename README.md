@@ -211,7 +211,9 @@ Define o alinha o espaçamento mento do eixo horinzontal (principal) de acordo c
 
 ## align-items
 
-Define o alinhamento do eixo vertical de acordo com o tamanho do elemento.
+Define o alinhamento do eixo vertical (cross axis) de acordo com o tamanho do elemento.
+
+![align-items](/src/img/align-items.png)
 
 ```css:
 .container {
@@ -224,3 +226,75 @@ Define o alinhamento do eixo vertical de acordo com o tamanho do elemento.
 ## align-content
 
 Define o espaçamento dos elementos (em bloco) quando existem muitos (é necessario que sempre aja a quebra de linha flex-wrap).
+
+![align-content](/src/img/align-content.png)
+
+# Propriedades que Alteram os Items
+
+# order
+
+Determina a ordem em que os elementos aparecerão.
+
+![order](/src/img/order.svg)
+
+Por padrão os flex items são dispostos na tela na ordem do código. Mas a propriedade order controla a ordem em que aparecerão no container.
+
+```css:
+.item {
+  order: 5; /* default is 0 */
+}
+```
+
+# align-self
+
+Permite que o alinhamento padrão (ou o que estiver definido por align-items) seja sobrescrito para ítens individuais.
+
+![align-self](/src/img/align-self.svg)
+
+```css:
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+
+# flex-grow
+
+Define a habilidade de um flex item de crescer, caso necessário. O valor dessa propriedade é um valor numérico sem indicação de unidade, que serve para cálculo de proporção. Este valor dita a quantidade de espaço disponível no container que será ocupado pelo item.
+
+Se todos os ítens tiverem flex-grow definido em 1, o espaço remanescente no container será distribuído de forma igual entre todos. Se um dos ítens tem o valor de 2, vai ocupar o dobro de espaço no container com relação aos outros (ou pelo menos vai tentar fazer isso).
+
+```css:
+.item {
+   flex-grow: <numero>; /* o valor default(padrão) é 0 */
+```
+
+Valores negativos não são aceitos pela propriedade.
+
+# flex-shrink
+
+Define a habilidade de um flex item de encolher, caso necessário.
+
+```css:
+.item {
+    flex-shrink: <número>; /* o valor padrão é 0 */
+```
+
+Valores negativos não são aceitos pela propriedade.
+
+# flex basics
+
+Define o tamanho padrão para um elemento antes que o espaço remanescente do container seja distribuído. Pode ser um comprimento (por exemplo, 20%, 5rem, etc) ou uma palavra-chave. A palavra-chave auto significa "observe minhas propriedades de altura ou largura" (o que era feito pela palavra-chave main-size, que foi depreciada). A palavra-chave content significa "estabeleça o tamanho com base no conteúdo interno do ítem" - essa palavra-chave ainda não tem muito suporte, então não é fácil de ser testada, assim como suas relacionadas: max-content, min-content e fit-content.
+
+```css:
+.item {
+    flex-basis: flex-basis:  | auto; /* o valor padrão é auto */
+```
+
+# flex
+
+Esta é a propriedade shorthand para flex-grow, flex-shrink e flex-basis, combinadas. O segundo e terceiro parâmetros (flex-shrink e flex-basis) são opcionais. O padrão é 0 1 auto, mas se você definir com apenas um número, é equivalente a 0 1.
+
+```css:
+.item {
+    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+```
