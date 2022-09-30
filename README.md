@@ -259,7 +259,7 @@ Permite que o alinhamento padrão (ou o que estiver definido por align-items) se
 
 # flex-grow
 
-Define a habilidade de um flex item de crescer, caso necessário. O valor dessa propriedade é um valor numérico sem indicação de unidade, que serve para cálculo de proporção. Este valor dita a quantidade de espaço disponível no container que será ocupado pelo item.
+Divide o espaço disponivel do container para os filho de forma igual
 
 Se todos os ítens tiverem flex-grow definido em 1, o espaço remanescente no container será distribuído de forma igual entre todos. Se um dos ítens tem o valor de 2, vai ocupar o dobro de espaço no container com relação aos outros (ou pelo menos vai tentar fazer isso).
 
@@ -273,6 +273,8 @@ Valores negativos não são aceitos pela propriedade.
 # flex-shrink
 
 Define a habilidade de um flex item de encolher, caso necessário.
+
+Caso eu tenha um container com larura de 500px e 4 items de 250, ativando o shrink (1) faz com que os 4 items se ajustem(diminuam) para que caibam naquele container.
 
 ```css:
 .item {
@@ -298,3 +300,7 @@ Esta é a propriedade shorthand para flex-grow, flex-shrink e flex-basis, combin
 .item {
     flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
 ```
+
+<b>Flex: 0</b>; usamos para quando que nossos itens não ocupem todo os espaço do container(somente do seu proprio conteudo).
+
+<b>Flex: 1</b>; é quando queremos que os items tenha a mesma distribuição dentro do container mesmo que seus conteudos sejam diferentes.
