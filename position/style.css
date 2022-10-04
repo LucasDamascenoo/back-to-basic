@@ -1,0 +1,16 @@
+.container {
+  background: red;
+  margin-top: 80px;
+  width: 60%;
+  padding: 6rem;
+  position: relative;
+}
+
+.div__filha {
+  background: black;
+  width: 5%;
+  padding: 3rem;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
