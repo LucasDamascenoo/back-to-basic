@@ -1,16 +1,33 @@
 .container {
-  background: red;
-  margin-top: 80px;
-  width: 60%;
-  padding: 6rem;
-  position: relative;
+  background: gray;
+  width: auto;
+  color: white;
+  width: 80%;
 }
 
-.div__filha {
+.quadrados1 {
+  width: 100px;
+  height: 100px;
+  background: reD;
+  position: relative;
+  top: 75px;
+  left: 50px;
+}
+
+.quadrados2 {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+}
+
+.quadrados3 {
+  width: 100px;
+  height: 100px;
   background: black;
-  width: 5%;
-  padding: 3rem;
-  position: absolute;
-  top: -40px;
-  left: -30px;
+}
+
+.quadrados4 {
+  width: 100px;
+  height: 100px;
+  background: pink;
 }

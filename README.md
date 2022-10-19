@@ -78,6 +78,97 @@ Na imagem podemos usar alguns atributos para mudar a forma que a imagem aparecem
 - <b>center center</b>: é a forma de alinha a imagem no eixo horizontal e vertical.
 - <b>cover</b>: é para que a imagem "cubra" toda o espaço diponivel na tela.
 
+## Unidades de Medidas
+
+No css temos unidades de medidas absolutas e relativas.
+
+<b>Absolutas</b>:
+
+- px
+
+Unidade de medida mais usada, porem ela é uma unidade que quando definida ela não se adapta ao layout da tela ou seja, sempre vai ter a largura ou a altura fixa em determinado valor.
+
+<b>Relativas</b>:
+
+São unidades que se adaptam ao navegador (viewport).
+
+As mais usadas são.
+
+- em e rem
+- vh e vw
+- %
+- max and min
+
+<b>Em e Rem</b>:
+
+Em é uma medidas relativa referente ao pai.
+
+```css:
+ body  {
+  font-size:10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+```
+
+No exemplo acima, defimos uma font-size padrão para nosso body de 10 px, já no H1, aplicamos um valor de 2em, ou seja 2x o valor do meu pai, que nesse caso será de 20px.
+
+<b> Caso tenha um outro elemento que seja filho da propriedade de 20px e aplicamos 2em,agora esse filho terá 40px, pois herdou os 20px e não os 10px que definimos no primeiro pai</b>
+
+Rem tambem é uma unidade de medida relativa mas ligada ao root, por padrão dos navegadores temos uma fonte de 16px.
+
+Podemos alterar esse valor no root do nosso html, que é a tag html.
+
+```css:
+ html  {
+  font-size:10px ou 62.5%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+```
+
+nesse caso nosso rem agora vale 2x 10px.
+
+<b> Onde usar rem e onde usar em?</b>
+
+Não tem uma regra 100% especifica, mas podemos usar rem para font-sizes e em para margin e padding.
+
+- rem : font-size
+- em : padding and margin
+
+## Responsividade
+
+Viewport : é uma meta tag com finalidade na tela útil dos navegadores, sem essa tag os elementos não se adequam corretamente no tamanho da tela.
+
+definir widght em %
+evitar hight por padding
+
+min-width(600px) == 600px ou maior
+max-width(500px) == 500px ou menor
+
+se formos criar um layout mobile first, podemos usar min-widgt,
+pois nosso layout sera feito primeiramente para telas menores,
+apos isso, criamos para telas maiores.
+
+a ordem que incluimos nossos breakpoint tambem importa,
+então precisamos incluir sempre o breakpoint menor para o maior.
+
+Breakpoints:
+
+a ideia é evitar usar um monte de breakpoints, entao
+precisamos "brincar" com nosso site e ver os tamanhos
+que estão apresentando problema e arrumar o media query
+atraves dessa resolucão.
+
+Dicas :
+
+Todo site é resposivo logo de inicio, se não é mais, fizemos algo errado.
+Evitar tamanhos fixos
+
 ## Box-model
 
 É o modelo "caixa" que todo nossos elementos possuem.
@@ -136,6 +227,42 @@ Temos 3 maneiras de manipular Layouts no css.
 ## Floats
 
 Float é uma maneira de manipular elementos (caindo em desuso) atraves de suas propriedades.
+
+## Positions
+
+Com a propriedades positions conseguimos mudar os elementos de acordo com as propriedades aplicadas.
+
+- Static
+
+é a propriedade padrão dos navegadores, ou seja renderiza na ordem que aparece no documento.
+
+Não é possivel aplicar top e left.
+
+- Relative
+
+Muda o posicionamento relativamente a sua posição original(elemento sai do fluxo), ao mudarmos um elemento relativamente, o espaço "original" vai continuar reservado como se o elemento ainda estivesse ali.
+
+![relative](../back-to-basic/src/img/Screenshot-1.png)
+
+Podemos aplicar top e left
+
+- Absolute
+
+Muda o posicionamento de acordo com o pai (que não seja static) mais proximo, caso não exista ele movimenta o elemento de acordo com o body. elementos que estejam como absolute, sobrepoem outros elementos.
+
+Podemos aplicar top e left
+
+- Fixed
+
+fixa a posição do elemento de acordo com a posição do navegador.
+
+Podemos aplicar top e left
+
+- Sticked
+
+Movimenta o elemento de acordo com o scroll do mouse.
+
+Podemos aplicar top e left
 
 ## Flex-box
 
